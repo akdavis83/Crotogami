@@ -1,0 +1,299 @@
+body{
+  background: #062969;
+}
+h1{
+  color:white;
+  font-family: "Asap", sans-serif;
+}
+.bird{
+  margin:20px 100px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  font-family: "Major Mono Display", monospace;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,  #8ac1fc, #3fa0fa);
+  border: 0px solid #ffffff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 5px;
+}
+
+header {
+  z-index: 1;
+  width: 100%;
+  min-height: 50px;
+  background: linear-gradient(180deg, #8ac1fc, #3fa0fa);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header :last-child {
+  margin-left: auto;
+}
+
+.header-element {
+  color: rgb(255, 255, 255);
+  margin: 5px;
+  padding: 0.5em;
+  border: 1px solid white;
+  border-radius: 20px;
+  transition: 0.1s ease-in;
+}
+.header-element:hover {
+  cursor: pointer;
+  background: white;
+  border-color: #8abbfc;
+  color: #8ac9fc !important;
+  font-weight: bold;
+}
+
+i {
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#intro {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  text-align: center;
+  text-shadow: 0px 3px 20px rgba(5, 32, 24, 0.54);
+  animation: slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both, up 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 1s;
+}
+
+#intro2 {
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  text-align: center;
+  text-shadow: 0px 3px 20px rgba(5, 32, 24, 0.54);
+  animation: slide2 1s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.container {
+  width: calc(90% - 15px);
+  padding: 1em;
+  margin: 0 auto 3em;
+}
+.container h3 {
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-bottom: 1.5em;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #8ac1fc, #3fa0fa);
+}
+.container p, .container li {
+  line-height: 20px;
+  text-indent: 1em;
+  margin: 1em;
+  font-weight: bold;
+  color: white;
+}
+
+footer {
+  font-size: 16px;
+  width: 100%;
+  min-height: 80px;
+  background: linear-gradient(180deg, #8ac1fc, #3fa0fa);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+footer p {
+  width: 360px;
+  max-width: 90vw;
+  height: 30px;
+  margin-left: auto;
+  margin-right: 10px;
+  overflow: wrap;
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+}
+.flex-container .flex-element {
+  margin: 10px;
+  height: 100px;
+  min-width: 100px;
+  background: linear-gradient(180deg, #8ac1fc, #3fa0fa);
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  border-radius: 10px;
+  transition: 0.2s ease-out;
+  font-size: 50px;
+}
+.flex-container .flex-element .tooltip {
+  z-index: 1;
+}
+.flex-container .flex-element p {
+  line-height: 16px;
+  font-size: 16px;
+  text-indent: 0px;
+  text-align: center;
+}
+.flex-container .flex-element:hover {
+  transform: translatey(10px) scale(1.5);
+  box-shadow: 0px 3px 20px rgba(5, 32, 24, 0.54);
+}
+.flex-container .flex-element:hover i {
+  transition: 0.4s ease-out;
+  transform: rotate3d(1, 1, 1, 360deg);
+}
+
+.main-color, li a {
+  color: #918AFC;
+  padding: 5px;
+  transition: 0.4s ease-out;
+  text-align: center;
+}
+.main-color:hover, li a:hover {
+  color: white;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #918AFC, #4b3ffa);
+}
+
+p, h1, h2, h3 {
+  text-shadow: 0px 3px 20px rgba(5, 32, 24, 0.54);
+}
+
+em {
+  color: #918AFC;
+  display: inline block;
+  font-style: normal;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-800px) rotateY(30deg) scale(0);
+    transform-origin: -100% 50%;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotateY(0) scale(1);
+    transform-origin: 1800px 50%;
+    opacity: 1;
+  }
+}
+@keyframes slide2 {
+  0% {
+    transform: translateZ(700px) translateX(-400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0) translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes up {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: calc(50% - 1.5em);
+  }
+}
+#rabit{
+  width:180px;
+  position:absolute;
+  top:10%;
+  animation:walk 5s linear infinite;
+}
+
+.bird:active{
+ background-image:url(https://i.pinimg.com/originals/b4/9f/71/b49f71320c7c94dbdf3539f1ea095e76.gif) ;
+  background-size: cover;
+}
+.scene {
+  transform-style: preserve-3d;
+  transform: rotateX(55deg) rotateZ(45deg);
+}
+
+.square-origami {
+  --slice-width: 15em;
+  --square-width: calc(2 * var(--slice-width));
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--square-width);
+  height: var(--square-width);
+  cursor: pointer;
+}
+.square-origami .slice {
+  width: var(--slice-width);
+  height: var(--slice-width);
+  background-image: url("origami\ \(2\).png");
+  background-size: var(--square-width) var(--square-width);
+  transition: 0.3s;
+  transform: rotateZ(0);
+}
+.square-origami .slice:nth-child(1) {
+  background-position: top left;
+  transform-origin: right;
+  transition-delay: 0.9s;
+}
+.square-origami .slice:nth-child(2) {
+  background-position: top right;
+  transform-origin: bottom;
+  transition-delay: 0.6s;
+}
+.square-origami .slice:nth-child(3) {
+  background-position: bottom left;
+  transform-origin: top;
+  transition-delay: 0s;
+}
+.square-origami .slice:nth-child(4) {
+  background-position: bottom right;
+  transform-origin: left;
+  transition-delay: 0.3s;
+}
+.square-origami:hover .slice:not(:nth-child(3)) {
+  visibility: hidden;
+}
+.square-origami:hover .slice:nth-child(1) {
+  transform: rotateY(0.5turn);
+  transition-delay: 0s;
+}
+.square-origami:hover .slice:nth-child(2) {
+  transform: rotateX(-0.5turn);
+  transition-delay: 0.3s;
+}
+.square-origami:hover .slice:nth-child(3) {
+  transform: rotateX(0.5turn);
+  transition-delay: 0.9s;
+}
+.square-origami:hover .slice:nth-child(4) {
+  transform: rotateY(-0.5turn);
+  transition-delay: 0.6s;
+}
